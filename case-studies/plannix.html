@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — Plannix — Nour Moustafa</title>
+  <meta name="description" content="How Plannix, an AI-powered K-12 lesson planning tool, went from hackathon idea to working prototype in 48 hours." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="grid-overlay" id="gridOverlay" aria-hidden="true">
+    <div class="grid-12">
+      <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+      <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+      <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html#top" class="logo">NOUR<span class="dot">.</span>MOUSTAFA</a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#resume">Resume</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-meta">
+        <span><span class="status-dot" aria-hidden="true"></span> AVAILABLE FOR WORK</span>
+        <span id="coordReadout" aria-hidden="true">X 0000 / Y 0000</span>
+        <button type="button" class="grid-toggle" id="gridToggle" aria-pressed="false">GRID</button>
+      </div>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- Sibling of <header>, not nested inside it — see index.html for why. -->
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+    <div class="container">
+      <ul>
+        <li><a href="../index.html#about"><span class="mono">01</span> About</a></li>
+        <li><a href="../index.html#work"><span class="mono">02</span> Work</a></li>
+        <li><a href="../index.html#skills"><span class="mono">03</span> Skills</a></li>
+        <li><a href="../index.html#resume"><span class="mono">04</span> Resume</a></li>
+        <li><a href="../index.html#contact"><span class="mono">05</span> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="cs-hero">
+      <div class="container grid-12">
+        <a href="../index.html#work" class="cs-back reveal">← Back to work</a>
+
+        <p class="eyebrow reveal" style="grid-column: 1/-1;"><span class="idx">02.1</span> CASE STUDY — FLAGSHIP</p>
+        <h1 class="cs-title reveal">Plannix</h1>
+        <p class="cs-dek reveal">
+          <!-- EDIT: one-sentence summary of the project -->
+          An AI-powered lesson planning tool that turns a teacher's standards and objectives into a ready-to-teach K-12 lesson plan in minutes, not hours.
+        </p>
+
+        <dl class="cs-meta reveal">
+          <div>
+            <dt>Role</dt>
+            <dd>Product Design Lead</dd>
+          </div>
+          <div>
+            <dt>Timeline</dt>
+            <dd>48-hour hackathon</dd>
+          </div>
+          <div>
+            <dt>Team</dt>
+            <!-- EDIT: real team size/composition -->
+            <dd>4 people — design, 2× eng, PM</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>Figma, AI research tools</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="cs-section">
+      <div class="container grid-12">
+        <div class="cs-section-head reveal">
+          <p class="eyebrow"><span class="idx">01</span> PROBLEM</p>
+          <h2>Lesson planning eats the hours teachers don't have.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <!-- EDIT: expand with real research/problem framing -->
+          <p>K-12 teachers routinely spend several hours a week building lesson plans that meet state standards, differentiate for varied skill levels, and still leave room for their own teaching style. Existing tools were either generic worksheet generators or rigid template libraries — neither felt built for the actual planning workflow teachers described in early conversations.</p>
+        </div>
+        <div class="cs-image reveal">RESEARCH ARTIFACT PLACEHOLDER — swap in interview notes, survey data, or a problem framing diagram</div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="cs-section">
+      <div class="container grid-12">
+        <div class="cs-section-head reveal">
+          <p class="eyebrow"><span class="idx">02</span> PROCESS</p>
+          <h2>Positioning, brand, and prototype — built in parallel.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <!-- EDIT: real process narrative -->
+          <p>With 48 hours on the clock, I led product design across three parallel tracks: defining the positioning and value proposition, building a lightweight brand system so the pitch felt like a real product, and prototyping the core planning flow in Figma alongside engineering.</p>
+          <ul class="cs-list">
+            <li>Ran quick-turn conversations with teachers to validate the core pain point before designing anything.</li>
+            <li>Defined Plannix's positioning: an assistant that drafts a first-pass lesson plan, not a replacement for a teacher's judgment.</li>
+            <li>Built a name, wordmark, and minimal visual system fast enough to keep pace with engineering.</li>
+            <li>Prototyped the input → generated plan → edit flow in Figma, tested informally with teammates between builds.</li>
+            <li>Structured the final pitch narrative around the problem, the live demo, and what would ship next.</li>
+          </ul>
+        </div>
+        <div class="cs-image reveal">PROCESS ARTIFACT PLACEHOLDER — swap in wireframes, Figma flow screenshots, or brand exploration</div>
+      </div>
+    </section>
+
+    <!-- OUTCOME -->
+    <section class="cs-section">
+      <div class="container grid-12">
+        <div class="cs-section-head reveal">
+          <p class="eyebrow"><span class="idx">03</span> OUTCOME</p>
+          <h2>A working prototype, pitched live.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <!-- EDIT: real outcome narrative -->
+          <p>Plannix shipped as a working, demoable prototype by the end of the hackathon. The team pitched live to judges, walking through the generated-plan flow end to end, and got direct feedback from teachers on-site that validated the core mechanic: a first-draft plan a teacher would actually want to edit, not discard.</p>
+        </div>
+
+        <div class="cs-outcomes reveal">
+          <div class="cs-outcome">
+            <!-- EDIT: replace with a real, defensible metric -->
+            <span class="stat">48h</span>
+            <p>From concept to live pitch</p>
+          </div>
+          <div class="cs-outcome">
+            <span class="stat">1</span>
+            <p>Working end-to-end prototype</p>
+          </div>
+          <div class="cs-outcome">
+            <span class="stat">3</span>
+            <p>Parallel design tracks led</p>
+          </div>
+          <div class="cs-outcome">
+            <span class="stat">K–12</span>
+            <p>Target grade range</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cs-next reveal">
+        <span class="eyebrow">More work</span>
+        <a href="../index.html#work">Back to case studies →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container grid-12">
+      <div class="footer-row">
+        <span>© <span id="year">2026</span> NOUR MOUSTAFA</span>
+        <span>BUILT WITH HTML / CSS / JS — NO FRAMEWORK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
