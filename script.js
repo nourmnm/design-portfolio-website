@@ -1,7 +1,6 @@
 /**
  * Portfolio interactivity — vanilla JS, no dependencies.
  * - mobile nav toggle
- * - blueprint grid overlay toggle (signature interaction)
  * - live cursor coordinate readout (desktop only)
  * - scroll-triggered reveal animations
  * - sticky header shadow / active nav link
@@ -29,19 +28,6 @@
         navMobile.classList.remove('is-open');
         document.body.style.overflow = '';
       });
-    });
-  }
-
-  /* ---------------------------------------------------------------
-     Blueprint grid overlay toggle
-     --------------------------------------------------------------- */
-  var gridToggle = document.getElementById('gridToggle');
-  var gridOverlay = document.getElementById('gridOverlay');
-
-  if (gridToggle && gridOverlay) {
-    gridToggle.addEventListener('click', function () {
-      var isVisible = gridOverlay.classList.toggle('is-visible');
-      gridToggle.setAttribute('aria-pressed', String(isVisible));
     });
   }
 

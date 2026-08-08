@@ -175,26 +175,6 @@ input:focus-visible,
   gap: var(--grid-gap);
 }
 
-/* Structural blueprint grid overlay — the site's signature device.
-   Purely decorative/systems-signalling; toggled via the "GRID" button in the header. */
-.grid-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: var(--container-pad);
-  opacity: 0;
-  transition: opacity var(--dur-base) var(--ease);
-}
-.grid-overlay.is-visible { opacity: 1; }
-.grid-overlay .grid-12 { height: 100%; }
-.grid-overlay .col {
-  border-inline: var(--hairline) dashed color-mix(in srgb, var(--c-accent) 35%, transparent);
-  height: 100%;
-}
-
 /* ==========================================================================
    SITE HEADER / NAV
    ========================================================================== */
@@ -281,7 +261,8 @@ input:focus-visible,
   50% { opacity: 0.35; }
 }
 
-.grid-toggle {
+.header-btn {
+  display: inline-flex;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.06em;
@@ -291,12 +272,7 @@ input:focus-visible,
   color: var(--c-ink-soft);
   transition: all var(--dur-fast) var(--ease);
 }
-.grid-toggle:hover { border-color: var(--c-accent); color: var(--c-ink); }
-.grid-toggle[aria-pressed="true"] {
-  background: var(--c-ink);
-  color: var(--c-paper);
-  border-color: var(--c-ink);
-}
+.header-btn:hover { border-color: var(--c-accent); color: var(--c-ink); }
 
 .nav-toggle {
   display: flex;
