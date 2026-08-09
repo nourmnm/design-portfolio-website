@@ -99,6 +99,73 @@
   }
 
   /* ---------------------------------------------------------------
+     Case study sort control
+     Clicking a filter button reorders .case-card elements in place —
+     matching cards move to the top, non-matching stay put below, nothing
+     is hidden or unmounted. Uses the FLIP technique (First-Last-Invert-Play)
+     so the reorder reads as a smooth shuffle instead of a layout jump.
+     --------------------------------------------------------------- */
+  var caseFilter = document.querySelector('.case-filter');
+  var caseList = document.querySelector('.case-list');
+
+  if (caseFilter && caseList) {
+    var filterButtons = Array.prototype.slice.call(caseFilter.querySelectorAll('.filter-btn'));
+    var caseCards = Array.prototype.slice.call(caseList.querySelectorAll('.case-card'));
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (button.getAttribute('aria-pressed') === 'true') return;
+
+        filterButtons.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+        button.setAttribute('aria-pressed', 'true');
+
+        sortCaseCards(button.getAttribute('data-filter'));
+      });
+    });
+
+    function sortCaseCards(filter) {
+      // FIRST: record current positions
+      var firstRects = caseCards.map(function (card) { return card.getBoundingClientRect(); });
+
+      // reorder the DOM: matches first (stable order), then the rest (stable order)
+      var ordered = caseCards;
+      if (filter !== 'all') {
+        var matching = [];
+        var rest = [];
+        caseCards.forEach(function (card) {
+          var categories = (card.getAttribute('data-categories') || '').split(/\s+/);
+          (categories.indexOf(filter) !== -1 ? matching : rest).push(card);
+        });
+        ordered = matching.concat(rest);
+      }
+      ordered.forEach(function (card) { caseList.appendChild(card); });
+
+      if (prefersReducedMotion) return;
+
+      // LAST + INVERT + PLAY
+      ordered.forEach(function (card, i) {
+        var firstRect = firstRects[caseCards.indexOf(card)];
+        var lastRect = card.getBoundingClientRect();
+        var dx = firstRect.left - lastRect.left;
+        var dy = firstRect.top - lastRect.top;
+        if (!dx && !dy) return;
+
+        card.style.transition = 'none';
+        card.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+        // eslint-disable-next-line no-unused-expressions
+        card.getBoundingClientRect(); // force reflow so the transform above applies before animating
+        card.style.transition = 'transform 420ms var(--ease)';
+        card.style.transform = '';
+
+        card.addEventListener('transitionend', function handler() {
+          card.style.transition = '';
+          card.removeEventListener('transitionend', handler);
+        });
+      });
+    }
+  }
+
+  /* ---------------------------------------------------------------
      Footer year
      --------------------------------------------------------------- */
   var yearEl = document.getElementById('year');
