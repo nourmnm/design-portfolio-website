@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nour Moustafa — UX/UI Designer</title>
+  <meta name="description" content="UX/UI Designer with a fine arts background, building systematic, AI-fluent product experiences for enterprise, fintech, and AI-driven products." />
+
+  <!-- ============================================================
+       FONTS
+       Space Grotesk (display), Inter (body), JetBrains Mono (labels/data).
+       Swap for self-hosted files if you want a zero-network-request build.
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#top" class="logo">NOUR<span class="dot">.</span>MOUSTAFA</a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-meta">
+        <span><span class="status-dot" aria-hidden="true"></span> AVAILABLE FOR WORK</span>
+        <span id="coordReadout" aria-hidden="true">X 0000 / Y 0000</span>
+        <a href="assets/resume/nour-moustafa-resume.pdf" class="header-btn" download>
+          Resume
+        </a>
+      </div>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- Deliberately a sibling of <header>, not nested inside it: the header's
+       backdrop-filter creates a containing block for position:fixed descendants,
+       which would shrink this panel to the header's own box instead of the viewport. -->
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+    <div class="container">
+      <ul>
+        <li><a href="#about"><span class="mono">01</span> About</a></li>
+        <li><a href="#work"><span class="mono">02</span> Work</a></li>
+        <li><a href="#skills"><span class="mono">03</span> Skills</a></li>
+        <li><a href="#resume"><span class="mono">04</span> Resume</a></li>
+        <li><a href="#contact"><span class="mono">05</span> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="top">
+      <div class="container grid-12">
+        <div class="hero-inner grid-12">
+          <p class="eyebrow hero-eyebrow"><span class="idx">00</span> UX / UI DESIGNER — SEATTLE, WA</p>
+
+          <h1 class="hero-title">
+            Designing systems that hold up under real product complexity<span class="accent">.</span>
+          </h1>
+
+          <p class="hero-sub">
+            <!-- EDIT: one-line value proposition — keep it concrete, not a slogan -->
+            I turn ambiguous problems into structured, testable interfaces — for teams shipping AI products, fintech tools, and platforms that need to scale past version one.
+          </p>
+
+          <div class="hero-foot grid-12">
+            <div class="hero-tags">
+              <span class="tag">AI Product Design</span>
+              <span class="tag">Design Technologist</span>
+              <span class="tag">Founding Designer</span>
+              <span class="tag">Fintech / Enterprise UX</span>
+            </div>
+
+            <a href="#about" class="scroll-cue">
+              <span class="line" aria-hidden="true"></span>
+              Scroll
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section class="section-pad" id="about">
+      <div class="container">
+        <hr class="section-rule" />
+      </div>
+      <div class="container grid-12" style="margin-top: var(--space-7);">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">01</span> ABOUT</p>
+          <h2 class="section-title">Fine arts foundation, systems-first practice.</h2>
+        </div>
+      </div>
+
+      <div class="container grid-12">
+        <!-- EDIT: replace with a real headshot. Keep the 4:5 ratio for layout. -->
+        <figure class="about-photo reveal">
+          <span>PHOTO PLACEHOLDER<br />4:5 — replace /assets/images/headshot.jpg</span>
+        </figure>
+
+        <div class="about-body reveal">
+          <p class="about-bio">
+            <!-- EDIT: real bio, ~2 short paragraphs -->
+            I'm a UX/UI designer trained at the School of Visual Arts in New York, where a fine arts background taught me to see composition, contrast, and hierarchy before I ever opened a design tool. That visual instinct now drives how I approach product problems: structure first, decoration last.
+          </p>
+          <p class="about-bio">
+            I hold Google's UX Design and AI Essentials certifications, and I build with AI tools as part of my everyday workflow — from research synthesis to rapid prototyping — not as a novelty, but as infrastructure. I'm currently looking for roles in AI product design, design technology, founding design, and fintech or enterprise UX.
+          </p>
+
+          <div class="strengths">
+            <div class="strength">
+              <span class="idx mono">A</span>
+              <h3>Fast, adaptable learner</h3>
+              <p>Comfortable picking up new tools, domains, and constraints mid-project without losing momentum.</p>
+            </div>
+            <div class="strength">
+              <span class="idx mono">B</span>
+              <h3>Deadline-driven, quality-held</h3>
+              <p>Hackathon-tested: ships on time without cutting the reasoning behind the decisions.</p>
+            </div>
+            <div class="strength">
+              <span class="idx mono">C</span>
+              <h3>Fine-arts visual thinking</h3>
+              <p>Composition, contrast, and typographic discipline inform every interface, not just the polish pass.</p>
+            </div>
+            <div class="strength">
+              <span class="idx mono">D</span>
+              <h3>AI-fluent workflow</h3>
+              <p>Uses AI tooling across research, prototyping, and iteration as a working method, not a feature.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CASE STUDIES
+         ============================================================ -->
+    <section class="section-pad" id="work">
+      <div class="container">
+        <hr class="section-rule" />
+      </div>
+      <div class="container grid-12" style="margin-top: var(--space-7);">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">02</span> CASE STUDIES</p>
+          <h2 class="section-title">Selected work.</h2>
+        </div>
+      </div>
+
+      <div class="container grid-12">
+        <div class="case-list">
+          <!-- Flagship case study — Plannix -->
+          <article class="case-card is-flagship reveal">
+            <div class="case-media">
+              <!-- EDIT: replace with real Plannix screenshot/cover image -->
+              <span class="mono">PLANNIX COVER — 16:9 placeholder</span>
+            </div>
+            <div class="case-body">
+              <div class="case-top">
+                <span class="case-flag">FLAGSHIP</span>
+                <span class="tag mono">2026 · Hackathon</span>
+              </div>
+              <h3 class="case-title">Plannix</h3>
+              <p class="case-role">AI-powered K-12 lesson planning tool. Led product design end-to-end: positioning, branding, Figma prototyping, and the final pitch.</p>
+
+              <div class="case-tags">
+                <span class="tag">Product Strategy</span>
+                <span class="tag">Branding</span>
+                <span class="tag">Figma Prototyping</span>
+                <span class="tag">Pitch Design</span>
+              </div>
+
+              <a href="case-studies/plannix.html" class="case-link">Read the full case study →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+         ============================================================ -->
+    <section class="section-pad" id="skills">
+      <div class="container">
+        <hr class="section-rule" />
+      </div>
+      <div class="container grid-12" style="margin-top: var(--space-7);">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">03</span> SKILLS &amp; TOOLS</p>
+          <h2 class="section-title">The toolkit, grouped by function.</h2>
+        </div>
+      </div>
+
+      <div class="container grid-12">
+        <div class="skills-grid reveal">
+          <div class="skill-group">
+            <p class="eyebrow">Design</p>
+            <ul class="skill-tags">
+              <li class="tag">Figma</li>
+              <li class="tag">Prototyping</li>
+              <li class="tag">Design Systems</li>
+              <li class="tag">Wireframing</li>
+              <li class="tag">Visual Design</li>
+              <li class="tag">Branding</li>
+              <li class="tag">User Research</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <p class="eyebrow">Front-End</p>
+            <ul class="skill-tags">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">Responsive Design</li>
+              <li class="tag">Accessibility</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <p class="eyebrow">AI / Workflow</p>
+            <ul class="skill-tags">
+              <li class="tag">Google AI Essentials</li>
+              <li class="tag">AI-Assisted Research</li>
+              <li class="tag">Rapid Prototyping</li>
+              <li class="tag">Prompt Design</li>
+              <li class="tag">Notion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESUME
+         ============================================================ -->
+    <section class="section-pad" id="resume">
+      <div class="container grid-12">
+        <div class="resume-panel reveal">
+          <div class="resume-top">
+            <p class="eyebrow"><span class="idx">04</span> RESUME</p>
+            <h2 class="resume-title">One PDF, everything a recruiter needs.</h2>
+            <p class="resume-sub">Roles, tools, and case study links in a single document — updated for AI product design and fintech/enterprise UX roles.</p>
+          </div>
+
+          <!-- EDIT: replace href with the real resume file path -->
+          <a href="assets/resume/nour-moustafa-resume.pdf" class="btn btn-primary" download>
+            ↓ Download Résumé (PDF)
+          </a>
+
+          <div class="resume-meta">
+            <span>FORMAT: PDF</span>
+            <span>UPDATED: 2026-08</span>
+            <span>SIZE: ~200KB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="section-pad" id="contact">
+      <div class="container">
+        <hr class="section-rule" />
+      </div>
+      <div class="container grid-12" style="margin-top: var(--space-7);">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">05</span> CONTACT</p>
+          <h2 class="section-title">Let's talk about the work.</h2>
+        </div>
+      </div>
+
+      <div class="container grid-12">
+        <div class="contact-grid reveal">
+          <div>
+            <a href="mailto:nour.mmou@gmail.com" class="contact-email">nour.mmou@gmail.com</a>
+          </div>
+
+          <nav class="contact-social" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/nour-m-275732337/" target="_blank" rel="noopener noreferrer">
+              LinkedIn <span class="arrow">↗</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container grid-12">
+      <div class="footer-row">
+        <span>© <span id="year">2026</span> NOUR MOUSTAFA</span>
+        <span>BUILT WITH HTML / CSS / JS — NO FRAMEWORK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
