@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nour Moustafa — Communications Coordinator</title>
+  <meta name="description" content="Nour Moustafa — communications and content professional. Storytelling, copywriting, graphic design, and Adobe Creative Suite for mission-driven organizations." />
+  <style>
+    :root {
+      --navy: #0f2540;
+      --navy-2: #16375c;
+      --slate: #334155;
+      --slate-light: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --text: #1e293b;
+      --radius: 10px;
+      --shadow: 0 1px 3px rgba(15, 37, 64, 0.06), 0 8px 24px rgba(15, 37, 64, 0.05);
+      --maxw: 1080px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- Header ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+    }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--slate);
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--navy);
+      color: #fff !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.15s ease;
+    }
+    .nav-cta:hover { background: var(--navy-2); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--navy);
+    }
+    .nav-toggle svg { display: block; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0 64px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: #eff4ff;
+      padding: 6px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .hero .role {
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: var(--slate);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .hero .value {
+      font-size: 1.1rem;
+      color: var(--slate);
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--slate);
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    a.contact-chip:hover { border-color: var(--accent); transform: translateY(-1px); color: var(--accent-dark); }
+    .contact-chip svg { color: var(--accent); flex-shrink: 0; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 64px 0; }
+    section.alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-head { margin-bottom: 36px; max-width: 720px; }
+    .section-head h2 {
+      font-size: 1.6rem;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+    .section-head .kicker {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .section-head p { color: var(--slate); font-size: 1.05rem; }
+
+    /* Summary */
+    .summary-text { font-size: 1.15rem; color: var(--slate); max-width: 760px; line-height: 1.7; }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .skill-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .skill-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(15,37,64,0.08), 0 16px 32px rgba(15,37,64,0.07); }
+    .skill-icon {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      background: #eff4ff;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .skill-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; font-weight: 700; }
+    .skill-card p { font-size: 0.95rem; color: var(--slate); }
+
+    /* Tools row */
+    .tools {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .tools .label { font-weight: 600; color: var(--navy); margin-right: 6px; font-size: 0.95rem; }
+    .tag {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--slate);
+    }
+
+    /* Experience */
+    .exp-item {
+      border-left: 2px solid var(--border);
+      padding: 0 0 40px 28px;
+      position: relative;
+    }
+    .exp-item:last-child { padding-bottom: 0; }
+    .exp-item::before {
+      content: "";
+      position: absolute;
+      left: -7px; top: 4px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 1px var(--border);
+    }
+    .exp-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+    .exp-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); }
+    .exp-org { color: var(--accent-dark); font-weight: 600; }
+    .exp-date {
+      font-size: 0.85rem;
+      color: var(--slate-light);
+      font-weight: 600;
+      white-space: nowrap;
+      background: var(--bg-alt);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .exp-sub { color: var(--slate-light); font-size: 0.92rem; margin-bottom: 14px; }
+    .exp-list { list-style: none; display: grid; gap: 10px; }
+    .exp-list li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--slate);
+      font-size: 0.98rem;
+    }
+    .exp-list li::before {
+      content: "";
+      position: absolute;
+      left: 4px; top: 10px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* Education */
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .edu-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    .edu-card h3 { color: var(--navy); font-size: 1.1rem; margin-bottom: 6px; }
+    .edu-card .meta { color: var(--slate-light); font-size: 0.9rem; margin-bottom: 4px; }
+    .edu-card p { color: var(--slate); font-size: 0.96rem; }
+    .edu-card .edu-list { list-style: none; display: grid; gap: 8px; margin-top: 12px; }
+    .edu-card .edu-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--slate);
+      font-size: 0.94rem;
+    }
+    .edu-card .edu-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px; top: 9px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .cert-list { list-style: none; display: grid; gap: 12px; }
+    .cert-list li {
+      display: flex; align-items: center; gap: 12px;
+      color: var(--slate); font-size: 0.98rem; font-weight: 500;
+    }
+    .cert-list svg { color: var(--accent); flex-shrink: 0; }
+
+    /* Footer CTA */
+    .cta {
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 72px 0;
+    }
+    .cta h2 { font-size: 1.8rem; margin-bottom: 12px; letter-spacing: -0.01em; }
+    .cta p { color: #cbd5e1; font-size: 1.1rem; max-width: 560px; margin: 0 auto 28px; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+    .btn-outline:hover { border-color: #fff; transform: translateY(-1px); }
+
+    footer.foot {
+      background: #0a1a2f;
+      color: #94a3b8;
+      text-align: center;
+      padding: 28px 0;
+      font-size: 0.88rem;
+    }
+    footer.foot a { color: #cbd5e1; }
+    footer.foot a:hover { color: #fff; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 760px) {
+      .nav-links {
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 8px 0;
+        display: none;
+        box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 24px; }
+      .nav-links .nav-cta { margin: 8px 24px; text-align: center; }
+      .nav-toggle { display: block; }
+      .edu-grid { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+      .hero { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="brand">Nour Moustafa<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="https://drive.google.com/file/d/1Z4fI0rp59qYIiMsjdhIYjYaPM6R_b1Ig/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow">Communications &middot; Content &middot; Design</span>
+      <h1>Nour Moustafa</h1>
+      <p class="role">Communications Coordinator</p>
+      <p class="value">Communications professional with a BFA in Visual &amp; Critical Studies and hands-on experience across content creation, graphic design, and project coordination &mdash; translating complex ideas into clear, compelling stories for varied audiences.</p>
+      <div class="contact-bar">
+        <a class="contact-chip" href="mailto:nour.mmou@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          nour.mmou@gmail.com
+        </a>
+        <span class="contact-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bellevue, WA
+        </span>
+        <a class="contact-chip" href="https://www.linkedin.com/in/nourmm/" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section id="summary">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:14px;">
+        <h2>A mission-driven storyteller</h2>
+      </div>
+      <p class="summary-text">I combine copywriting, digital content management, and stakeholder communication with a genuine commitment to community-facing work. Skilled in Adobe Creative Suite, photography, and videography, I take complex ideas and turn them into clear, compelling stories &mdash; the kind that help an organization connect with the audiences and communities it serves.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 style="color: var(--accent);">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
+          <h3>Content Development &amp; Copywriting</h3>
+          <p>Story development, editing, and product copywriting across e-commerce and case-study formats &mdash; translating ideas into clear, on-brand writing.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.999 6.012 17.5 2 12 2z"/></svg></div>
+          <h3>Graphic Design &amp; Creative Production</h3>
+          <p>Adobe Creative Suite &mdash; Photoshop, Illustrator, InDesign, Premiere Pro &mdash; plus Figma, photography, and videography for print and digital.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M6 8h12M6 12h8"/></svg></div>
+          <h3>Digital Content &amp; CMS Management</h3>
+          <p>CMS-backed web content and HTML/CSS, with structured documentation and content organization that keeps digital channels consistent.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <h3>Project &amp; Campaign Coordination</h3>
+          <p>Managing multiple concurrent projects and stakeholder communications in a fast-paced environment, from content calendars to launches.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>Communication</h3>
+          <p>Translating complex ideas for varied audiences, with one-on-one and small-group instruction experience and a patient, listening-first style.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+          <h3>Photography &amp; Videography</h3>
+          <p>Producing photo and video content and editing in Premiere Pro to bring stories to life across social, web, and internal channels.</p>
+        </div>
+      </div>
+      <div class="tools">
+        <span class="label">Hands-on with:</span>
+        <span class="tag">Photoshop</span>
+        <span class="tag">Illustrator</span>
+        <span class="tag">InDesign</span>
+        <span class="tag">Premiere Pro</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Photography &amp; Video</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">CMS / Web Content</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Experience</span>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-title">UX/UI Designer &amp; Project Manager</span> &mdash;
+            <span class="exp-org">Cloudypedia</span>
+          </div>
+          <span class="exp-date">2025 &ndash; Present</span>
+        </div>
+        <p class="exp-sub">Google Cloud Premier Service Partner</p>
+        <ul class="exp-list">
+          <li>Coordinated multiple concurrent client projects, managing timelines, priorities, and cross-functional stakeholder communication.</li>
+          <li>Served as front-line point of contact for internal and client stakeholders, translating technical and creative decisions into clear, non-technical language.</li>
+          <li>Built structured documentation and reusable tracking tools to support organized, repeatable workflows.</li>
+          <li>Configured design systems and visual assets within a shared enterprise design file, applying consistent branding and visual standards.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-title">Etsy Shop Owner</span> &mdash;
+            <span class="exp-org">Independent (Teacher Resource Templates)</span>
+          </div>
+          <span class="exp-date">2024 &ndash; Present</span>
+        </div>
+        <p class="exp-sub">Content, design, and launch strategy</p>
+        <ul class="exp-list">
+          <li>Wrote and published product copy &mdash; titles, descriptions, and tags &mdash; across an 8-product, 4-week launch sequence.</li>
+          <li>Designed marketing graphics and product visuals to support brand consistency and audience engagement.</li>
+          <li>Managed content calendar and listing strategy independently, balancing creative and administrative work.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-title">Arabic Language Instructor</span> &mdash;
+            <span class="exp-org">Volunteer, Community-based</span>
+          </div>
+          <span class="exp-date">2025 &ndash; Present</span>
+        </div>
+        <p class="exp-sub">One-on-one and small-group instruction</p>
+        <ul class="exp-list">
+          <li>Delivered one-on-one and small-group instruction, adapting communication style and pacing to each learner's needs.</li>
+          <li>Managed scheduling, materials, and learner progress tracking with consistent follow-through.</li>
+          <li>Built patience, active listening, and clear verbal communication through direct, ongoing engagement.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <span class="exp-title">Beauty Counter Manager</span> &mdash;
+            <span class="exp-org">Macy's</span>
+          </div>
+          <span class="exp-date">2021 &ndash; 2024</span>
+        </div>
+        <p class="exp-sub">Team leadership, brand messaging, and events</p>
+        <ul class="exp-list">
+          <li>Led and trained a team of beauty advisors, ensuring consistent, on-brand product messaging and customer communication.</li>
+          <li>Maintained visual merchandising and counter presentation standards in line with brand guidelines.</li>
+          <li>Planned and led store-wide promotional events that grew a loyal base of long-term repeat customers.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Project -->
+  <section id="project" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Selected Project</span>
+      </div>
+      <div class="exp-item" style="padding-bottom:0;">
+        <div class="exp-head">
+          <div>
+            <span class="exp-title">Plannix &mdash; AI-Powered K-12 Lesson Planning Tool</span>
+          </div>
+          <span class="exp-date">Boundless Founder Hackathon</span>
+        </div>
+        <p class="exp-sub">Product storytelling &amp; case-study copywriting</p>
+        <ul class="exp-list">
+          <li>Led product storytelling and case-study copywriting for an AI tool supporting inclusive K-12 lesson planning.</li>
+          <li>Developed visual and written content to communicate product value to non-technical audiences.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Education &amp; Certifications</span>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>BFA in Visual &amp; Critical Studies</h3>
+          <p class="meta">School of Visual Arts &middot; New York, NY &middot; 2022</p>
+          <ul class="edu-list">
+            <li>Mastered illustration across traditional and digital mediums.</li>
+            <li>Studied animation using Adobe Creative Suite (Photoshop, Illustrator, Premiere Pro).</li>
+            <li>Explored photography, HTML/CSS, and 2D animation for a Visual &amp; Critical Studies capstone.</li>
+          </ul>
+        </div>
+        <div class="edu-card">
+          <h3>Certifications</h3>
+          <ul class="cert-list" style="margin-top:12px;">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              Google UX Design Professional Certificate
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              Google AI Essentials Certificate
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <h2>Let's tell your story together</h2>
+      <p>I'm excited about communications work that serves a mission and a community. The fastest way to reach me is email or LinkedIn &mdash; I'd love to talk.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-outline" href="mailto:nour.mmou@gmail.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          Email
+        </a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/nourmm/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      &copy; <span id="year"></span> Nour Moustafa &middot;
+      <a href="mailto:nour.mmou@gmail.com">nour.mmou@gmail.com</a> &middot;
+      Bellevue, WA
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    // Close menu after tapping a link (mobile)
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { links.classList.remove('open'); toggle.setAttribute('aria-expanded', false); });
+    });
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
